@@ -1,0 +1,6 @@
+# Dependencies
+/node_modules
+
+# Configuration and Secrets
+.env
+# You can also use *.log to ignore all log files
