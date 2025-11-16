@@ -25,7 +25,7 @@ app.get("/", (req, res) => {
 
 // --- NEW PRODUCTS ROUTE ADDED HERE ---
 // This route will handle GET requests to /api/products
-app.get("/api/products", (req, res) => {
+app.get("/products", (req, res) => {
   return res.status(200).json({
     message: "This is new feature change, a new route for products",
   });
