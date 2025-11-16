@@ -20,9 +20,19 @@ connectDB();
 
 // Root route
 app.get("/", (req, res) => {
-  res.send("User REST API is running! Access /api/users for data.");
+  res.send("User REST API is running! Access /api/users for data.");
 });
 
+// --- NEW PRODUCTS ROUTE ADDED HERE ---
+// This route will handle GET requests to /api/products
+app.use("/api/products", (req, res) => {
+  return res.status(200).json({
+    message: "This is new feature change, a new route for products samin",
+  });
+});
+// ------------------------------------
+
+// Existing Users Route
 // Routes
 app.use("/api/users", userRoutes);
 
@@ -31,5 +41,5 @@ app.use(errorHandler);
 
 // Listen to the server
 app.listen(port, () => {
-  console.log(`Server is running on port: ${port}`);
+  console.log(`Server is running on port: ${port}`);
 });
